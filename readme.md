@@ -28,11 +28,11 @@ usuario2@daw-docker:~$ docker run --name holaMundo hello-world
 
 #### b) Comprueba que no se está ejecutando. 
 
-![](.\imagenes\Captura3.png)
+![](/imagenes/Captura3.png)
 
 #### c)Lista los contenedores que están parados.
 
-![](.\imagenes\Captura2.png)
+![](/imagenes/Captura2.png)
 
 ####  d)Borra el contenedor.
 
@@ -42,7 +42,7 @@ Con el comando:
 usuario2@daw-docker:~$ docker rm holaMundo 
 ```
 
-![](.\imagenes\Captura4.png)
+![](/imagenes/Captura4.png)
 
 ### 3. Crea un contenedor interactivo desde una imagen debian. 
 
@@ -100,13 +100,13 @@ Processing triggers for libc-bin (2.31-13+deb11u5) ...
 
 No sigue corriendo, porque se cerró y no esta corriendo en segundo plano.
 
-![](.\imagenes\Captura5.png)
+![](/imagenes/Captura5.png)
 
 #### c)Vuelve a iniciar el contenedor y accede de nuevo a él de forma interactiva. ¿Sigue instalado el nano?. 
 
 Sigue instalado.
 
-![](.\imagenes\Captura6.png)
+![](/imagenes/Captura6.png)
 
 #### d)Sal del contenedor, y bórralo. 
 
@@ -134,7 +134,7 @@ Unable to find image 'nginx:latest' locally
 latest: Pulling from library/nginx
 ```
 
-![](.\imagenes\Captura7.png)
+![](/imagenes/Captura7.png)
 
 #### a)Al crear el contenedor, ¿has tenido que indicar algún comando para que lo ejecute? 
 
@@ -142,7 +142,7 @@ latest: Pulling from library/nginx
 
 #### Accede al navegador web y comprueba que el servidor esta funcionando. 
 
-![](.\imagenes\Captura8.png)
+![](/imagenes/Captura8.png)
 
 #### b)Muestra los logs del contenedor.
 
@@ -180,7 +180,7 @@ latest: Pulling from library/nextcloud
 8740c948ffd4: Already exists 
 ```
 
-![](.\imagenes\Captura9.png)
+![](/imagenes/Captura9.png)
 
 ## -*Webgrafía y materiales usados-*
 
