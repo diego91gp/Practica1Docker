@@ -2,7 +2,7 @@
 
 [TOC]
 
-### 1.Instala docker en una máquina y configúralo para que se pueda usar con un usuario sin privilegios.
+### 1. Instala docker en una máquina y configúralo para que se pueda usar con un usuario sin privilegios.
 
 Instalamos docker
 
@@ -16,13 +16,13 @@ Configuramos docker para que lo pueda usar unusuario sin privilegios  con el sig
 daw@daw-docker:~$ sudo usermod -aG docker usuario2
 ```
 
-### 2.Ejecuta un contenedor a partir de la imagen hello-word.
+### 2. Ejecuta un contenedor a partir de la imagen hello-word.
 
 ```bash
 usuario2@daw-docker:~$ docker run --name holaMundo hello-world
 ```
 
-#### a)Comprueba que nos devuelve la salida adecuada.
+#### a) Comprueba que nos devuelve la salida adecuada.
 
 ![](/imagenes/Captura1.png)
 
@@ -30,11 +30,11 @@ usuario2@daw-docker:~$ docker run --name holaMundo hello-world
 
 ![](/imagenes/Captura3.png)
 
-#### c)Lista los contenedores que están parados.
+#### c) Lista los contenedores que están parados.
 
 ![](/imagenes/Captura2.png)
 
-####  d)Borra el contenedor.
+#### d) Borra el contenedor.
 
 Con el comando:
 
@@ -56,7 +56,7 @@ Status: Downloaded newer image for debian:latest
 root@39bc18a65078:/#
 ```
 
-#### a)Instala un paquete (por ejemplo nano). 
+#### a) Instala un paquete (por ejemplo nano). 
 
 ```bash
 root@39bc18a65078:/# apt install nano
@@ -96,26 +96,26 @@ update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mod
 Processing triggers for libc-bin (2.31-13+deb11u5) ...
 ```
 
-#### b)Sal de la terminal, ¿sigue el contenedor corriendo? ¿Por qué?. 
+#### b) Sal de la terminal, ¿sigue el contenedor corriendo? ¿Por qué?. 
 
 No sigue corriendo, porque se cerró y no esta corriendo en segundo plano.
 
 ![](/imagenes/Captura5.png)
 
-#### c)Vuelve a iniciar el contenedor y accede de nuevo a él de forma interactiva. ¿Sigue instalado el nano?. 
+#### c) Vuelve a iniciar el contenedor y accede de nuevo a él de forma interactiva. ¿Sigue instalado el nano?. 
 
 Sigue instalado.
 
 ![](/imagenes/Captura6.png)
 
-#### d)Sal del contenedor, y bórralo. 
+#### d) Sal del contenedor, y bórralo. 
 
 ```bash
 root@39bc18a65078:/# exit
 usuario2@daw-docker:~$ docker rm Debian
 ```
 
-#### e)Crea un nuevo contenedor interactivo desde la misma imagen. ¿Tiene el nano instalado?
+#### e) Crea un nuevo contenedor interactivo desde la misma imagen. ¿Tiene el nano instalado?
 
 No esta instalado.
 
@@ -126,7 +126,7 @@ bash: nano: command not found
 root@75323ab18a3e:/# 
 ```
 
-### 4.Crea un contenedor demonio con un servidor nginx, usando la imagen oficial de nginx. 
+### 4. Crea un contenedor demonio con un servidor nginx, usando la imagen oficial de nginx. 
 
 ```bash
 usuario2@daw-docker:~$ docker run -d --name nginx nginx
@@ -144,7 +144,7 @@ latest: Pulling from library/nginx
 
 ![](/imagenes/Captura8.png)
 
-#### b)Muestra los logs del contenedor.
+#### b) Muestra los logs del contenedor.
 
 ```bash
 usuario2@daw-docker:~$ docker logs nginx
@@ -169,7 +169,7 @@ usuario2@daw-docker:~$ docker logs nginx
 2023/01/15 08:21:53 [error] 28#28: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "172.17.0.2", referrer: "http://172.17.0.2/"
 ```
 
-### 5.Crea un contenedor con la aplicación Nextcloud, mirando la documentación en docker Hub, para personalizar el nombre de la base de datos sqlite que va a utilizar.
+### 5. Crea un contenedor con la aplicación Nextcloud, mirando la documentación en docker Hub, para personalizar el nombre de la base de datos sqlite que va a utilizar.
 
 
 
