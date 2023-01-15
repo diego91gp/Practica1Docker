@@ -24,7 +24,7 @@ usuario2@daw-docker:~$ docker run --name holaMundo hello-world
 
 #### a)Comprueba que nos devuelve la salida adecuada.
 
-![](.\imagenes\Captura1.png)
+![](/imagenes/Captura1.png)
 
 #### b) Comprueba que no se está ejecutando. 
 
